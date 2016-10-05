@@ -2,9 +2,17 @@
 
 
 
-
+/**
+./[executable_name] [imagepath] [line thickness] [r][g][b]
+*/
 int main(int argc, char** argv)
 {
+    if(argc != 6)
+    {
+        std::cout << "usage: " << argv[0] << " [imagepath] [line thickness] [r][g][b]\n";
+        return -1;
+    }
+    
     unsigned char edgewidth;
     sscanf(argv[2], "%d", &edgewidth);
     
